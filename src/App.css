@@ -1,38 +1,97 @@
-.App {
-  text-align: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300&display=swap');
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*{
+  font-family: "barlow", sans-serif;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.error{
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-top:-30px ;
+  padding: 10px 50px 5px 0px;
+}
+.li1{
+  list-style: none;
+  background-color:#F4F2F0 ;
+  width: 200px;
+  padding: 10px;
+  word-wrap:break-word;
+  margin: 5px;
+}
+.li2{
+  color: white;
+  list-style: none;
+  background-color:#aa23aa ;
+  width: 200px;
+  padding: 10px;
+  word-wrap:break-word;
+  margin: 5px;
+}
+.outerInputDiv{
+  background-color: #C8D7D2;
+  margin-bottom: 30px;
+}
+.inputDiv{
+  padding-top:30px;
+  padding-bottom: 30px;
+  background-color: #C8D7D2;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.listButton{
+  background-color: black;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+textarea{
+  resize: none;
+  border-radius: 10px;
+  margin-right: 10px;
+  width: 200px;
+  border: 0px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+textarea:hover{
+  transform: scale(1.1);
+}
+
+::placeholder {
+  font-size: 1em;
+  padding-left: 5px;
+  padding-top: 5px;
+}
+.button{
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  background-color: transparent;
+  border: 0px;
+}
+.button:hover {
+  background-color: transparent;
+  color: #fff;
+  cursor: pointer;
+}
+
+.button2{
+  font-size: 20px;
+  background-color: transparent;
+  border: 0px;
+}
+.button2:hover{
+  background-color: transparent;
+  color: #fff;
+  cursor: pointer;
+}
+.button3{
+  color: white;
+  font-size: 20px;
+  background-color: transparent;
+  border: 0px;
+}
+.button3:hover{
+  background-color: transparent;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
 }
