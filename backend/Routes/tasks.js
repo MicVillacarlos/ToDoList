@@ -10,7 +10,7 @@ const {
 
 router.get('/tasks',getTasks)
 router.post('/tasks/add',createTask)
-router.put('/tasks/update',updateTask)
+router.put('/tasks/update/:id',updateTask)
 router.delete('/tasks/:id',deleteTask)
 
 module.exports = router;

@@ -1,25 +1,19 @@
 import React from 'react';
-import { Container } from './style';
-import { Input } from 'antd';
+import { Container,NavbarItems, LogoContainer} from './style';
+import { Link } from 'react-router-dom'
 
-type NavbarProps = {
-  addTask: any;
-  value: any;
-  onChangeHandler: any;
-}
-
-export const Navbar = (props: NavbarProps) => {
+export const Navbar = () => {
 
     return(
         <Container>
-          <Input 
-                style={{width:'300px',height:'2em'}} 
-                placeholder="Type task here"
-                value={props.value} onChange={ props.onChangeHandler }
-                />
-          <button onClick={props.addTask}>
-            Add Task
-          </button>
+          <LogoContainer>
+            <Link to='/' > <h2>TO DO APP</h2> </Link>
+          </LogoContainer>
+          <NavbarItems>
+            <Link to='/tasks/add'> <p>Create To Do</p></Link>
+            <p> | </p>
+            <Link to='/tasks'> <p>To do list</p></Link>
+          </NavbarItems>
         </Container>
     )
 }

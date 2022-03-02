@@ -31,8 +31,9 @@ const Task = require ('../Model/Task');
  const updateTask = async (req,res) => {
     const { id } = req.params;
     const { value } = req.body;
+
     try{
-        const updatedTask = await User.updateOne({_id:id},{ $set:{ value }});
+        const updatedTask = await Task.updateOne({_id:id},{ $set:{ value }});
         res.status(201).json({ success: true, updatedTask})
     }catch(err){
         res.status(400).json({ success: false, msg: ' Fail to update Tasks' })
