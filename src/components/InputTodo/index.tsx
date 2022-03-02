@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
-import { Container } from './style'
-import { Input } from 'antd' 
+import React, { useState} from 'react';
+import { Container } from './style';
+import { Input } from 'antd'; 
 import axios from 'axios'; 
 
 export const CreateTodo = () => {
-const [value,setValue] = useState<any[]>([])
+const [value,setValue] = useState('')
 
 const addTask = () => {
   const task = {
@@ -13,9 +13,9 @@ const addTask = () => {
 
   axios.post('http://localhost:4000/tasks/add',task)
   .then(res=> console.log(res)); 
-  setValue([])
+  setValue('')
 }
-const onChangeHandler = (e:any) => {
+const onChangeHandler = (e:React.ChangeEvent<HTMLInputElement>) => {
   setValue(e.target.value)
 }
   return (
