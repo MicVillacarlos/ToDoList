@@ -2,36 +2,27 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap');
 
-    top: 0;
     background-color: black;
-    font-family:'Roboto', 'sans';
-    width:100%;
-    height: 30px;
+    font-family:"Bungee Inline";
+    width:100vw;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 20px;
+    justify-content: center;
     text-decoration: none;
+    padding:1em;
 
     p{
         color: white
     }
-`
 
-export const NavbarItems = styled.div`
-    display:flex;
-    gap:10px;
-    margin-right: 3em;
-`
-    
-export const LogoContainer = styled.div`
-    text-decoration: none;
-
-    h2{
-        color: #98f0e4;
+    h1{
+        font-family: 'Bungee Inline', cursive;
+        color: white;
+        margin: 0;
         &:active{
-            color:white
+            color:#FEDE09;
         }
     }
 `
