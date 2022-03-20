@@ -10,7 +10,7 @@ const tasks = require('./Routes/tasks');
 app.use(express.urlencoded({extended:false}));
 app.use(express.json());
 
-mongoose.connect(process.env.DATABASE_URI,{ useNewUrlParser:true })
+mongoose.connect(process.env.DATABASE_URI,{ useNewUrlParser:true });
 mongoose.connection.on('connected',()=>{
     console.log('Connected to DB')
 })
