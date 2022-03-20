@@ -1,11 +1,6 @@
 import { Container,ButtonContainer } from './style'
+import { EditTodoProps } from '../types/type'
 import React from 'react'
-
-type EditTodoProps  ={
-    onClick: any
-    onChange: any
-    value:string
-}
 
 const EditTodo = (props: EditTodoProps) => {
   return (

@@ -1,10 +1,11 @@
-import React,{ useEffect, useState} from 'react'
-import { Container,ListContainer } from './style'
-import axios from 'axios'
-import EditTodo from '../EditTodo'
+import React,{ useEffect, useState} from 'react';
+import { Container,ListContainer } from './style';
+import axios from 'axios';
+import EditTodo from '../EditTodo';
+import { Task } from '../types/type';
 
 export const List = () => {
-const [tasks, setTasks] = useState<any[]>([])
+const [tasks, setTasks] = useState<Task[]>([])
 const [isEdit, setIsEdit] = useState(false)
 const [value,setValue] =useState('')
 const [taskToEdit,setTaskToEdit] = useState({_id:'',value:''})
@@ -22,13 +23,13 @@ const fetchData = () =>{
        fetchData()
     },[])
 
-const deleteTask = (_id:any) =>{
+const deleteTask = (_id:string) =>{
     axios.delete(`http://localhost:4000/tasks/${_id}`)
     .then(res=>{ console.log(res.data.data.value)})
     setTasks(tasks.filter( task => task._id !== _id ))
 } 
 
-const onChangeHandler = (e:any) =>{
+const onChangeHandler = (e:React.ChangeEvent<HTMLTextAreaElement>) =>{
     setValue(e.target.value)
 } 
 
