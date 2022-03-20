@@ -10,9 +10,11 @@ const tasks = require('./Routes/tasks');
 app.use(express.urlencoded({extended:false}));
 app.use(express.json());
 
-mongoose.connect(process.env.DATABASE_URI,{ useNewUrlParser:true },()=>{
-    console.log("connected to db")
+mongoose.connect(process.env.DATABASE_URI,{ useNewUrlParser:true })
+mongoose.connection.on('connected',()=>{
+    console.log('Connected to DB')
 })
+
 app.use(cors())
 app.use(tasks)
 
