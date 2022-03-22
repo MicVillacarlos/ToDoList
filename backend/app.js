@@ -15,6 +15,10 @@ mongoose.connection.on('connected',()=>{
     console.log('Connected to DB')
 })
 
+if (process.env.NODE_ENV === 'production'){
+    app.use(express.static('../build'))
+}
+
 app.use(cors())
 app.use(tasks)
 
