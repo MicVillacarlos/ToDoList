@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container} from './style'
 import { Button } from 'antd';
-import 'antd/dist/antd.css';
+import 'antd/dist/antd.min.css';
 import { Link } from 'react-router-dom'
 
 export const Home = () => {

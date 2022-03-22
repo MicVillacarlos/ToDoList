@@ -1,7 +1,7 @@
 import React, { useState} from 'react';
 import { Container } from './style';
 import { Input} from 'antd';
-import 'antd/dist/antd.css';
+import 'antd/dist/antd.min.css';
 import { List } from '../List';
 import axios from 'axios'; 
 
